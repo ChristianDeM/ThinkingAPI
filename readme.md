@@ -27,44 +27,6 @@
 | LocalHost:3000/v1/students/haveCertification  | v1/LocalHost:3000/v1/students/haveCertification  |Obtiene la lista de los estudiantes que cuenten con certificación  | 
 | LocalHost:3000/v1/students/credits  | v1/LocalHost:3000/v1/students/credits  |Obtiene la lista de los estudiantes que cuenten con calificacion mayor de 500 puntos  | 
 
-**Codigo**
-<p>StudentsService
 
- `class StudentsService{
-    static Getstudents(Students){
-        return Students
-    }
-    static ValidationCertification(Students){
-        const validation= Students.filter((student)=>student.haveCertification==true);
-        return  validation;
-    }
-    static GetCredits(Students){
-        const Credits= Students.filter((student)=>student.credits >= 500);
-        return  Credits;
-    }
-}
-module.exports=StudentsService`
 
-<p>Controller
 
-`const  StudentsService =require("../services/StudentsService");
-const   Reader = require("../utils/reader");
-
-class Controller{
-    static GetAllStudents(){
-        const Students=Reader.readJsonFile("./visualpartners.json")
-        return(StudentsService.Getstudents(Students))
-    }
-
-    static GetValidationCertification(){
-        const Students=Reader.readJsonFile("./visualpartners.json")
-        return(StudentsService.ValidationCertification(Students))
-    }
-    static Getbycredits(){
-        const Students=Reader.readJsonFile("./visualpartners.json")
-        return(StudentsService.GetCredits(Students))
-    }
-
-}
-
-module.exports=Controller`
