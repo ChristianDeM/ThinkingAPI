@@ -6,6 +6,13 @@
 <li> Habilitar un endpoint para consultar los emails de todos los estudiantes que tengan certificación
 <li> Habilitar un endpoint para consultar todos los estudiantes que tengan credits mayor a 500
 
-Nos basaremos en el siguiente diagra
+Nos basaremos en el siguiente diagrama
+
+```mermaid
+  graph TD;
+    StudentsService-->Controller.js;
+    Controller.js-->Server.js
+```
 
 <img>
+
