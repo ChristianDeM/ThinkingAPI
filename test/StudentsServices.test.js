@@ -8,3 +8,12 @@ describe("Tests StudentsServices Reader", () => {
     });
 
 });
+
+describe("Tests StudentsServices Reader", () => {
+    test("Requeasdrimiento devuelve los Students", () => {       
+        const Validationcertification = StudentsService.ValidationCertification(Students);
+        expect(Validationcertification[0].haveCertification).toBe(true);
+    });
+
+});
+
