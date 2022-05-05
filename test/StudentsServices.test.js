@@ -15,7 +15,7 @@ describe("Test Validationcertification con true", () => {
     });
 });
 
-describe("Tests GetCredits mayo de 500", () => {
+describe("Tests GetCredits mayor de 500", () => {
     test("Devulve a los que tienen mayor de 500", () => {       
         const Credits = StudentsService.GetCredits(Students);
         expect(Credits[0].credits).toBe(508);
