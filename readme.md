@@ -16,7 +16,7 @@
   graph TD;
     StudentsService.js-->Controller.js;
     Controller.js-->Server.js
-    Server.js--LocalHost3000
+    Server.js--:LocalHost3000
     
 ```
 
