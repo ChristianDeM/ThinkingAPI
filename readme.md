@@ -1,8 +1,8 @@
-# API de Thinking API 🏫
-**Sobre el proyecto**
+# API de Thinking 🏫
+## Sobre el proyecto ##
 <p>Hola que tal el dia hoy realizamos una api  con base a estudiantes como nombrela propuesta es  Thinking API  🏫
 
-<p>Este proyecto esta echo con javaScript Express y con "nodejs en su version 16.14.0"
+<p>Este proyecto esta echo con javaScript Express y con nodejs en su version 16.14.0
 <p>Adicionalmente se realizaron pruebas unitarias con Jest en su version 26. Se realizo con  esta version por la compatibilidad de automatizacion  en github. 
 
 **Los puntos claves para este proyecto son los siguientes.**
@@ -18,6 +18,7 @@
 ```mermaid
   graph TD;
     StudentsService.js-->Controller.js;
+    Reader.js-->controller.js
     Controller.js--LocalHost:3000-->Server.js 
     
 ```
@@ -30,3 +31,59 @@
 
 **Pruebas en Github Actions**
 <p> En el apartado de actions se pueden verificar las pruebas de unidad realizadas con exito.
+
+## codigo ##
+**StudentService.js**
+<p> En este apartado se encuentra la logica
+<li>StudentService  retorna la informacion  de la base de datos en .json   
+<li>ValidationCertification se usa el metodo filter para retornar un nuevo array donde  si haveCertification es igual a true  lo retorne  
+<li>GetCredits se usa el mismo metodo filter para crear un array nuevo  si  es mayor a 500 puntos 
+
+```
+class StudentsService{
+    static Getstudents(Students){
+        return Students
+    }
+    static ValidationCertification(Students){
+        const validation= Students.filter((student)=>student.haveCertification==true);
+        return  validation;
+    }
+    static GetCredits(Students){
+        const Credits= Students.filter((student)=>student.credits >= 500);
+        return  Credits;
+    }
+}
+
+module.exports=StudentsService
+
+```
+
+**StudentService.js**
+<p>Esta encargado a realizar las conexiones junto con Reader de la base de datos.
+
+```
+const  StudentsService =require("../services/StudentsService");
+const   Reader = require("../utils/reader");
+
+class Controller{
+    static GetAllStudents(){
+        const Students=Reader.readJsonFile("./visualpartners.json")
+        return(StudentsService.Getstudents(Students))
+    }
+
+    static GetValidationCertification(){
+        const Students=Reader.readJsonFile("./visualpartners.json")
+        return(StudentsService.ValidationCertification(Students))
+    }
+    static Getbycredits(){
+        const Students=Reader.readJsonFile("./visualpartners.json")
+        return(StudentsService.GetCredits(Students))
+    }
+
+}
+
+module.exports=Controllerconst  StudentsService =require("../services/StudentsService");
+const   Reader = require("../utils/reader");
+
+```
+
