@@ -18,8 +18,8 @@
 ```mermaid
   graph TD;
     StudentsService.js-->Controller.js;
-    Reader.js-->controller.js
-    Controller.js--LocalHost:3000-->Server.js 
+    Reader.js-->Controller.js;
+    Controller.js--LocalHost:3000-->Server.js;
     
 ```
 | Enpoints          | Request     | Response | 
