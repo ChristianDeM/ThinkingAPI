@@ -1,9 +1,16 @@
-# API de Thinking 🏫
+# API Thinking 🏫
+## CodeChallenge Porject  LaunchX ## 
 ## Sobre el proyecto ##
 <p>Hola que tal el dia hoy realizamos una api  con base a estudiantes como nombrela propuesta es  Thinking API  🏫
 
-<p>Este proyecto esta echo con javaScript Express y con nodejs en su version 16.14.0
-<p>Adicionalmente se realizaron pruebas unitarias con Jest en su version 26. Se realizo con  esta version por la compatibilidad de automatizacion  en github. 
+<p>Este proyecto esta echo con Express javaScript node js. 
+<p>Adicionalmente se realizaron pruebas unitarias con Jest. 
+
+### versions ###
+- Node js version `16.14.0`
+- jest version `26.0.0`
+- Express `4.18.1`
+- lint `8.14.0`
 
 **Los puntos claves para este proyecto son los siguientes.**
 
