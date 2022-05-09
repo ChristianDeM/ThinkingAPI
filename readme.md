@@ -7,10 +7,11 @@
 <p>Adicionalmente se realizaron pruebas unitarias con Jest. 
 
 ### versions ###
+- npm version `8.3.1`
 - Node js version `16.14.0`
 - jest version `26.0.0`
 - Express `4.18.1`
-- lint `8.14.0`
+- eslint `8.14.0`
 
 **Los puntos claves para este proyecto son los siguientes.**
 
@@ -93,4 +94,11 @@ module.exports=Controllerconst  StudentsService =require("../services/StudentsSe
 const   Reader = require("../utils/reader");
 
 ```
+
+## Prueba este proyecto de manera local ##
+
+<p> Puedes correr este proyecto de manera local 
+
+- baja como zip o clonando este repo.
+- ![Tux, the Linux mascot](/img/dowload.gif)
 
