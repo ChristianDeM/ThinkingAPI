@@ -97,8 +97,30 @@ const   Reader = require("../utils/reader");
 
 ## Prueba este proyecto de manera local ##
 
-<p> Puedes correr este proyecto de manera local 
+## importante se requiere  tener previamente  instalado npm node js esta version de prueba esta echa para SO windows puede requeriri cambios en el acrichivo json.
+
+ Puedes correr este proyecto de manera local con los siguientes pasos.  
 
 - baja como zip o clonando este repo.
-- ![Tux, the Linux mascot](/img/dowload.gif)
+ ![baja el repo](/img/dowload.gif)
 
+- instala Express `npm install express --save`
+ ![instala express](/img/instalandoexpress.gif)
+
+- Ahora corre el server con el siguiente comando `npm run server`
+ ![corriendo server](/img/runserver.gif)
+
+
+<p> verficando las pruebas con postaman
+
+## probando end points
+
+- all students 
+
+![corriendo server](/img/allstudents.gif)
+
+- all students certifications true
+![corriendo server](/img/certificationtrue.gif)
+
+- all students  more 500 pts
+![corriendo server](/img/masde500.gif)
