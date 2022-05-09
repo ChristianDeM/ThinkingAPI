@@ -37,8 +37,6 @@
 | LocalHost:3000/v1/students/credits  | v1/LocalHost:3000/v1/students/credits  |Obtiene la lista de los estudiantes que cuenten con calificacion mayor de 500 puntos  | 
 
 
-**Pruebas en Github Actions**
-<p> En el apartado de actions se pueden verificar las pruebas de unidad realizadas con exito.
 
 ## codigo ##
 **StudentService.js**
@@ -124,3 +122,45 @@ const   Reader = require("../utils/reader");
 
 - all students  more 500 pts
 ![corriendo server](/img/masde500.gif)
+
+
+## pruebas de unidad ##
+
+**Pruebas en Github Actions**
+<p> En el apartado de actions se pueden verificar las pruebas de unidad realizadas con exito.
+
+Devuelve todo lso students 
+opte por comporar el primer student con su id para saber que esta devolviendo correctamente su valor
+(Se pueden realizar pruebas con cada info del estudiante en caso de requerirlo) 
+```
+describe("Tests StudentsServices Reader", () => {
+    test("Requerimiento devuelve los Students", () => {       
+        const  GetallStudents= Students
+        expect(GetallStudents[0].id).toBe("6264d5d89f1df827eb84bb23");
+    });
+});
+
+```
+Devuelve todos los studiantes con true
+
+De igual forma se tomo el primer estudiante ya que este cuenta con true. 
+```
+describe("Test Validationcertification con true", () => {
+    test("Devuelve a los Estudents con true", () => {       
+        const Validationcertification = StudentsService.ValidationCertification(Students);
+        expect(Validationcertification[0].haveCertification).toBe(true);
+    });
+});
+```
+Devuelve a los estudiantes que tengan  mas 500 opte por poner los primeros 2 estudiantes ya que cuenta con mas de 500 creditos. 
+```
+describe("Tests GetCredits mayor de 500", () => {
+    test("Devulve a los que tienen mayor de 500", () => {       
+        const Credits = StudentsService.GetCredits(Students);
+        expect(Credits[0].credits).toBe(508);
+        expect(Credits[1].credits).toBe(677);
+    });
+})
+```
+
+
