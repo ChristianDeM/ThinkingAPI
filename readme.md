@@ -1,7 +1,7 @@
 # API Thinking 🏫
 ## CodeChallenge Project LaunchX ## 
 ## Sobre el proyecto ##
-<p>Hola que tal el dia hoy realizamos una api  con base a estudiantes como nombrela propuesta es  Thinking API  🏫
+<p>Hola que tal el dia hoy realizamos una api  con base a estudiantes como nombre Thinking API  🏫
 
 <p>Este proyecto esta echo con Express javaScript node js. 
 <p>Adicionalmente se realizaron pruebas unitarias con Jest. 
