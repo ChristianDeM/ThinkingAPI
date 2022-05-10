@@ -1,5 +1,5 @@
 # API Thinking 🏫
-## CodeChallenge Porject  LaunchX ## 
+## CodeChallenge Project LaunchX ## 
 ## Sobre el proyecto ##
 <p>Hola que tal el dia hoy realizamos una api  con base a estudiantes como nombrela propuesta es  Thinking API  🏫
 
